@@ -6,6 +6,8 @@ project(planning
     LANGUAGES CXX
 )
 
+enable_testing()
+include(CTest)
 set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
@@ -23,3 +25,4 @@ if(TARGET Eigen3::Eigen)
 endif()
 
 add_subdirectory(src)
+add_subdirectory(test/map_test)
